@@ -6,6 +6,7 @@ pool:
   
 stages:
 - stage: BuildApp
+  dependsOn: []
   displayName: Build Apps
   jobs:
   - job: BuildFrontendApp
@@ -25,6 +26,7 @@ stages:
       displayName: unit tests backend
       
 - stage: DeployDev
+  dependsOn: []
   displayName: Deploy to DEV environment
   jobs:
   - job: DeployFrontendDev
@@ -40,6 +42,7 @@ stages:
       displayName: deploy backend app to DEV
       
 - stage: DeployPROD
+  dependsOn: []
   displayName: Deploy to PROD environment
   jobs:
   - job: DeployFrontendPROD
